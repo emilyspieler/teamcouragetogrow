@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+<header class="jumbotron my-4">
+      <h1>New Collaborator</h1>
+
+      <form action="/wikis/<%= wikiId %>/collaborators/create" method="post">
+
+        <div class="form-group">
+          <label for="title">collaborator email</label>
+          <input type="email" class="form-control" name="email" aria-describedby="titleHelp" placeholder="Enter Email">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </header>
+
+    </main>
+
+  </body>
+</html>

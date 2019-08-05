@@ -1,0 +1,44 @@
+body {
+  padding-top: 54px;
+  background-image: linear-gradient(pink, yellow);
+  background-color: #cccccc;
+  margin-bottom: 25%;
+}
+
+h1 {
+  font-family: 'Muli', sans-serif;
+}
+
+h2 {
+  font-family: 'Muli', sans-serif;
+  font-size: 40px;
+}
+
+div.wiki-head{
+  padding-top: 5%;
+}
+
+P{
+  font-family: 'Playfair Display', serif;
+}
+
+header {
+  border: 1px solid black;
+}
+
+ul {
+  font-family: 'Playfair Display', serif;
+}
+
+li {
+  font-family: 'Playfair Display', serif;
+}
+
+header.jumbotron.my-4{
+  background-color: white;
+}
+
+button {
+  background-color: yellow;
+  border: .5px solid black;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <main class="container">
+      <% include ../static/partials/navbar.ejs %>
+
+      <header class="jumbotron my-4">
+      <h1>Current Collaborations</h1>
+
+      <ul class="list-group">
+
+        <% if(currentUser) { %>
+        <% collaborators.forEach((collaborator) => { %>
+
+            <li class="list-group-item">
+              <a href="/wikis/<%= collaborator.wikiId %>/collaborators/<%= collaborator.id %>"> <%= collaborator.email %> </a>
+            </li>
+
+          <% }) %>
+          <% } %>
+
+      </ul>
+    </header>
+
+    </main>
+  </body>
+</html>
