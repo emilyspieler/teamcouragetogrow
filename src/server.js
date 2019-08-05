@@ -20,8 +20,6 @@ const port = normalizePort(process.env.PORT || "3000");
    return false;
  }
 
-
-
 server.on("listening", () => {
    console.log(`server is listening for requests on port ${server.address().port}`);
    console.log(`The sendgrid API key is: ${process.env.SENDGRID_API_KEY}`);
