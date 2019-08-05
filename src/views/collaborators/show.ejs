@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+      <header class="jumbotron my-4">
+      <p><%= collaborator.email %></h1> now has permission to edit your private wiki.
+
+      <form style="display:initial" action="/wikis/<%= collaborator.wikiId %>/collaborators/<%= collaborator.id %>/destroy" method="post">
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </form>
+    </header>
+
+    </main>
+
+  </body>
+</html>

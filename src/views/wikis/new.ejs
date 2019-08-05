@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+<header class="jumbotron my-4">
+      <h1>New Wiki</h1>
+
+      <form action="/wikis/create" method="post">
+        <div class="form-group">
+          <label for="title">wiki title</label>
+          <input type="text" class="form-control" name="title" aria-describedby="titleHelp" placeholder="Enter Title">
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea rows="4" class="form-control" name="description" placeholder="Enter Description"></textarea>
+        </div>
+
+<% if(currentUser) { %>
+<% if(currentUser.isAdmin() || currentUser.isPremium()) { %>
+        <input type="checkbox" name="private" value="private">make private<br>
+<% } %>
+<% } %>
+</header>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+
+    </main>
+
+  </body>
+</html>

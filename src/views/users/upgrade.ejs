@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+
+<header class="jumbotron my-4">
+<h2>UPGRADE</h2>
+
+<% if(currentUser) { %>
+
+<form action="/users/<%= currentUser.id %>/upgrade" method="POST">
+  <script
+  src="https://checkout.stripe.com/checkout.js"
+  class= "stripe-button"
+  data-key = "pk_test_T5RKo9HqNsOA887IIpArjOO9"
+  data-amount = "1500"
+  data-description = "upgrade"
+  data-locale = "auto"
+  data-currency = "usd">
+</script>
+
+<input type ="hidden" name="chargeAmount" value="1500">
+
+  <% }%>
+</header>
+ </main>
+
+   </body>
+ </html>
